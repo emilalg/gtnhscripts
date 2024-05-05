@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# installs 2.6.0 
+
 sudo apt -y install openjdk-21-jdk
 sudo apt -y install unzip
 
@@ -17,9 +19,7 @@ cat whitelist.json > gtnh/whitelist.json
 # wget -O gtnh/mods/ServerUtilities.jar https://github.com/GTNewHorizons/ServerUtilities/releases/download/2.0.35/ServerUtilities-2.0.35.jar
 
 sudo firewall-cmd --permanent --zone=public --add-port=25555/tcp
-sudo firewall-cmd --permanent --zone=public --add-port=25555/udp
 sudo firewall-cmd --reload
 
-
-
 chmod +x serve.sh
+chmod +x service.sh

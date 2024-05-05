@@ -9,7 +9,7 @@ RUN apt-get update && \
 WORKDIR /minecraft
 
 # Expose port 25565 for Minecraft
-EXPOSE 25565
+EXPOSE 25555
 
 # Set entrypoint to the script that will start the server
 ENTRYPOINT ["./serve.sh"]
