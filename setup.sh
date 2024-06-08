@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# installs 2.6.0 
+# installs 2.6.0
 
 sudo apt -y install openjdk-21-jdk
 sudo apt -y install unzip
@@ -16,10 +16,7 @@ sed -i 's/server-port=25565/server-port=25555/' gtnh/server.properties
 cat whitelist.json > gtnh/whitelist.json
 
 # installed by default iguess
-# wget -O gtnh/mods/ServerUtilities.jar https://github.com/GTNewHorizons/ServerUtilities/releases/download/2.0.35/ServerUtilities-2.0.35.jar
+# wget -O gtnh/mods/ServerUtilities.jar https://github.com/GTNewHorizons/ServerUtilities/releases/download/2.0.35/ServerUtilities-2.0>
 
-sudo firewall-cmd --permanent --zone=public --add-port=25555/tcp
-sudo firewall-cmd --reload
-
-chmod +x serve.sh
-chmod +x service.sh
+chmod +x setup-s.sh
+sudo bash setup-s.sh
